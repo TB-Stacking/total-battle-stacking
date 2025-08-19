@@ -1,2 +1,60 @@
 # total-battle-stacking
 Stacking Tool für Epische Monster &amp; CP Run‘s
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Battle Truppenrechner Testversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Total Battle Truppenrechner</h1>
+    </header>
+
+    <main>
+        <section id="event-selection">
+            <h2>1. Wähle ein Event</h2>
+            <label>
+                <input type="radio" name="eventType" value="epic" onclick="showEpicMonsters()">
+                Epische Monster
+            </label>
+            <label>
+                <input type="radio" name="eventType" value="cp" onclick="showCPRun()">
+                CP-Run
+            </label>
+
+            <div id="epic-menu" class="submenu" style="display:none;">
+                <h3>Epische Monster auswählen:</h3>
+                <label><input type="checkbox" value="Schattenstadt"> Schattenstadt</label>
+                <label><input type="checkbox" value="Armageddon"> Armageddon</label>
+                <label><input type="checkbox" value="Weltuntergang"> Weltuntergang</label>
+            </div>
+
+            <div id="cp-menu" class="submenu" style="display:none;">
+                <h3>Gegner für CP-Run auswählen:</h3>
+                <label><input type="checkbox" value="Corax"> Corax</label>
+                <label><input type="checkbox" value="Reiter"> Reiter</label>
+            </div>
+        </section>
+
+        <section id="army-selection">
+            <h2>2. Truppen auswählen</h2>
+            <p>Beispielhafte Auswahl (Platzhalter-Werte)</p>
+            <label><input type="checkbox" value="SpearmanI"> Spearman I</label>
+            <label><input type="checkbox" value="SpearmanII"> Spearman II</label>
+            <label><input type="checkbox" value="ArcherI"> Archer I</label>
+            <label><input type="checkbox" value="CavalryI"> Cavalry I</label>
+        </section>
+
+        <section id="calculate">
+            <h2>3. Berechnung</h2>
+            <button onclick="calculateSetup()">Aufstellung berechnen</button>
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
