@@ -1,58 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Total Battle Truppenrechner Testversion</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Total Battle – Testversion</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Total Battle Truppenrechner</h1>
-    </header>
+  <header>
+    <h1>Total Battle Truppenrechner (Test)</h1>
+  </header>
+  <main>
+    <section>
+      <h2>1) Wähle Kampftyp</h2>
+      <label><input type="radio" name="mode" value="epic" checked> Epische Monster</label>
+      <label><input type="radio" name="mode" value="cp"> CP-Run</label>
+    </section>
 
-    <main>
-        <section id="event-selection">
-            <h2>1. Wähle ein Event</h2>
-            <label>
-                <input type="radio" name="eventType" value="epic" onclick="showEpicMonsters()">
-                Epische Monster
-            </label>
-            <label>
-                <input type="radio" name="eventType" value="cp" onclick="showCPRun()">
-                CP-Run
-            </label>
+    <section id="subselection">
+      <!-- Hier erscheint das Untermenü je nach Auswahl -->
+    </section>
 
-            <div id="epic-menu" class="submenu" style="display:none;">
-                <h3>Epische Monster auswählen:</h3>
-                <label><input type="checkbox" value="Schattenstadt"> Schattenstadt</label>
-                <label><input type="checkbox" value="Armageddon"> Armageddon</label>
-                <label><input type="checkbox" value="Weltuntergang"> Weltuntergang</label>
-            </div>
+    <section id="captains">
+      <h2>2) Wähle Hauptmänner / Held</h2>
+      <div id="capContainer"></div>
+    </section>
 
-            <div id="cp-menu" class="submenu" style="display:none;">
-                <h3>Gegner für CP-Run auswählen:</h3>
-                <label><input type="checkbox" value="Corax"> Corax</label>
-                <label><input type="checkbox" value="Reiter"> Reiter</label>
-            </div>
-        </section>
+    <section id="calculate">
+      <button id="btnCalc">Berechnen</button>
+    </section>
 
-        <section id="army-selection">
-            <h2>2. Truppen auswählen</h2>
-            <p>Beispielhafte Auswahl (Platzhalter-Werte)</p>
-            <label><input type="checkbox" value="SpearmanI"> Spearman I</label>
-            <label><input type="checkbox" value="SpearmanII"> Spearman II</label>
-            <label><input type="checkbox" value="ArcherI"> Archer I</label>
-            <label><input type="checkbox" value="CavalryI"> Cavalry I</label>
-        </section>
-
-        <section id="calculate">
-            <h2>3. Berechnung</h2>
-            <button onclick="calculateSetup()">Aufstellung berechnen</button>
-            <div id="result"></div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+    <section id="result">
+      <!-- Ergebnis wird hier angezeigt -->
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
